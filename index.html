@@ -4,7 +4,7 @@
 if(Hls.isSupported()) {
     var video = document.getElementById('video');
     var hls = new Hls();
-    hls.loadSource('https://d34t5yjz1ooymj.cloudfront.net/out/v1/875039d5eba0478fa8375a06b3aa5a37/index.m3u8'); // 동영상경로
+    hls.loadSource('http://cgntv-glive.ofsdelivery.net/live/_definst_/cgntv_kr01/chunklist_w1571003090.m3u8'); // 동영상경로
     hls.attachMedia(video);
     hls.on(Hls.Events.MANIFEST_PARSED,function() {
         video.play();
@@ -14,7 +14,7 @@ if(Hls.isSupported()) {
 // When the browser has built-in HLS support (check using `canPlayType`), we can provide an HLS manifest (i.e. .m3u8 URL) directly to the video element throught the `src` property.
 // This is using the built-in support of the plain video element, without using hls.js.
     else if (video.canPlayType('application/vnd.apple.mpegurl')) {
-    video.src = 'https://d34t5yjz1ooymj.cloudfront.net/out/v1/875039d5eba0478fa8375a06b3aa5a37/index.m3u8'; // 동영상경로
+    video.src = 'http://cgntv-glive.ofsdelivery.net/live/_definst_/cgntv_kr01/chunklist_w1571003090.m3u8'; // 동영상경로
     video.addEventListener('canplay',function() {
         video.play();
     });
